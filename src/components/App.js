@@ -14,8 +14,8 @@ export default class App extends Component {
     super();
     this.state = {
       tags: "",
-      cats: [],
-      dogs: [],
+      alps: [],
+      website: [],
       computers: [],
       images: [],
       loading: true,
