@@ -18,7 +18,7 @@ export default class App extends Component {
       website: [],
       computers: [],
       images: [],
-      loading: true,
+      loading: true
     };
   }
 
@@ -42,7 +42,7 @@ export default class App extends Component {
           this.setState({
             images: response.data.photos.photo,
             loading: false,
-            query
+            query: query
           });
         }
       })
@@ -67,10 +67,10 @@ export default class App extends Component {
         ):
           <Switch>
             <Route exact path="/" component={ () => <Redirect to="/alps" /> } />
-            <Route exact path="/search/:query" component={() => <PhotoContainer query={this.state.query} data={this.state.images} title={this.state.query} />} />
             <Route path="/alps" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />} />
             <Route path="/website" component={() => <PhotoContainer query="webiste" title="Website" data={this.state.website} />} />
             <Route path="/computers" component={() => <PhotoContainer query="computers" title="Computers" data={this.state.computers} />} />
+            <Route path="/search/:query" component={() => <PhotoContainer query={this.state.query} data={this.state.images} title={this.state.query} />} />
             <Route component={ErrorPage} />
           </Switch>
         }
