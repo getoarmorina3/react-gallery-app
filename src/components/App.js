@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import apiKey from "./config";
 import axios from "axios";
@@ -69,7 +69,7 @@ export default class App extends Component {
           <p>Loading...</p>
         ):
           <Switch>
-            <Route exact path="/" component={ () => <Redirect to="/alps" /> } />
+            <Route exact path="/" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />}  />
             <Route path="/alps" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />} />
             <Route path="/website" component={() => <PhotoContainer query="webiste" title="Website" data={this.state.website} />} />
             <Route path="/computers" component={() => <PhotoContainer query="computers" title="Computers" data={this.state.computers} />} />
