@@ -12,8 +12,8 @@ class SearchForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    let path = `/search/${this.state.searchInput}`;
     this.props.onSearch(this.state.searchInput);
+    let path = `/search/${this.state.searchInput}`;
     this.props.history.push(path);
     e.currentTarget.reset();
   };
@@ -23,10 +23,11 @@ class SearchForm extends Component {
       <form className="search-form" onSubmit={this.handleSubmit}>
         <input
           type="search"
-          onChange={this.onSearchChange}
           name="search"
           placeholder="Search..."
           required
+          onChange={this.onSearchChange}
+          ref={(input)  =>  this.searchText = input}
         />
         <button type="submit" className="search-button">
           <svg
