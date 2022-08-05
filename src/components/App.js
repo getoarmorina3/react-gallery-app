@@ -70,10 +70,10 @@ export default class App extends Component {
         ):
           <Switch>
             <Route exact path="/" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />}  />
-            <Route path="/alps" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />} />
-            <Route path="/website" component={() => <PhotoContainer query="webiste" title="Website" data={this.state.website} />} />
-            <Route path="/computers" component={() => <PhotoContainer query="computers" title="Computers" data={this.state.computers} />} />
-            <Route path="/:query" component={() => <PhotoContainer query={this.state.query} data={this.state.images} title={this.state.query} />} />
+            <Route exact path="/alps" component={() => <PhotoContainer query="alps" title="Alps" data={this.state.alps} />} />
+            <Route exact path="/website" component={() => <PhotoContainer query="webiste" title="Website" data={this.state.website} />} />
+            <Route exact path="/computers" component={() => <PhotoContainer query="computers" title="Computers" data={this.state.computers} />} />
+            <Route exact path="/:query" component={() => <PhotoContainer query={this.state.query} data={this.state.images} title={this.state.query} />} />
             <Route component={ErrorPage} />
           </Switch>
         }
