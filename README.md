@@ -10,3 +10,5 @@ With the powerful Create React App tool - I used:
     React Router to set up routes for three default topic pages and a search page.
     Axios to fetch data from the Flickr API and to display images in my app.
     Added logic to handle the search and various requirements of the project.
+
+Live [Demo](https://react-gallery-app-chi.vercel.app/)
