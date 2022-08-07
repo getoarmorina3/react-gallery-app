@@ -11,4 +11,4 @@ With the powerful Create React App tool - I used:
     Axios to fetch data from the Flickr API and to display images in my app.
     Added logic to handle the search and various requirements of the project.
 
-Live [Demo](https://react-gallery-app-chi.vercel.app/)
+[Preview](https://react-gallery-app-chi.vercel.app/)
